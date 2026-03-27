@@ -56,6 +56,7 @@ Text to rewrite:
 {text}
 """.strip()
 
+@app.post("/api/enhance")
 @app.post("/enhance")
 async def enhance(req: EnhanceRequest):
     if not req.text.strip():
@@ -85,6 +86,7 @@ async def enhance(req: EnhanceRequest):
         print(f"Error calling Gemini: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.get("/api/health")
 @app.get("/health")
 async def health():
     return {"status": "ok"}
