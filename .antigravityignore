@@ -1,0 +1,28 @@
+# Quota Protector (March 2026)
+
+# Ignore folders that shouldn't be indexed or read by the AI
+node_modules/
+dist/
+.git/
+.vercel/
+.next/
+server/venv/
+__pycache__/
+*.exe
+*.o
+*.a
+*.so
+*.pyc
+
+# Large data/media files
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.gif
+*.zip
+*.tar.gz
+
+# System generated
+.DS_Store
+Thumbs.db

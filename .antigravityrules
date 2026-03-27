@@ -1,0 +1,20 @@
+# Global Application Rules (March 2026)
+
+## Strictness & Coding Standards
+- **TypeScript**: Always use TypeScript 5.4+ features. No `any` types. Use strict null checks.
+- **React**: Use functional components with Hooks. Prefer Tailwind CSS for all styling.
+- **Python (FastAPI)**: Adhere to PEP 8. Use Type Hints for all function signatures and Pydantic for validation.
+- **Security**: Never expose `GEMINI_API_KEY` in the frontend or commit `.env` files.
+
+## High-Level Architecture
+- **Separation of Concerns**: Logic for text enhancement (AI) lives on the backend. Decoration logic (Unicode) stays on the frontend.
+- **Performance**: Optimize for a low-resource machine (4GB RAM). Avoid memory-heavy libraries.
+
+## Interaction Behavior
+- **No Apologies**: Never apologize for errors. Analyze logs and fix immediately.
+- **Direct Execution**: When a plan is agreed upon, proceed with implementation using the appropriate model (Flash for execution).
+- **Session Management**: Generate a `handover.md` every 20-30 prompts to reset context and save quota.
+
+## Quota Mastery
+- **Offload to Flash**: Default to Gemini 3 Flash for code generation, bug fixes, and terminal commands.
+- **Selective Pinning**: Only pin files being actively worked on.
