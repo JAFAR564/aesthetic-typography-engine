@@ -1,6 +1,6 @@
 // API_URL should match the backend server port (default 8000)
-// Using an environment variable or hardcoded default for local development
-const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:8000";
+// Using a relative path for production (Vercel) and a fallback for local dev
+const API_URL = import.meta.env.VITE_API_URL ?? (import.meta.env.PROD ? "/api" : "http://localhost:8000");
 
 export async function enhanceText(text: string, tone: string): Promise<string> {
   try {
