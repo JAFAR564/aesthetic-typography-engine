@@ -73,6 +73,11 @@ Deployment: Use the Vercel connection to parse the "preview URL" for visual erro
 4. The "Auto-Sync" Rule
 Add this line to yours .antigravityrules:
 "When requesting a new feature, always consult the NotebookLM MCP for architectural guidelines and the Supabase MCP for the current schema status before generating code."
+6. WSL MCP vs. Direct Modification Strategy
+In March 2026, choosing the right tool for file interaction on low-spec hardware (Celeron N4020, 4GB RAM) is a critical anti-lockout tactic.
+*   The "Structural" Move (WSL MCP): Use the WSL MCP server for directory listing, file searching, and batch reading. Since this executes natively in the Linux kernel, it bypasses the Windows/WSL I/O translation overhead, saving up to 500MB of RAM and reducing thermal throttling.
+*   The "Logic" Move (Direct Tools): Use the Antigravity built-in `replace_file_content` only for precise, multi-line logic edits where the AI needs a deep, immediate grasp of the file buffer.
+*   Reliability Rule: Always use the WSL MCP for tasks where case-sensitivity or Linux-specific permissions are critical (e.g., when resolving `import` errors in a case-sensitive Linux build).
 
 In March 2026,Google Antigravity 's interface goes beyond simple text prompts. To get the most out of your Pro plan , you'll need to master these three advanced interaction methods specifically designed to avoid the "7-day lockout" and increase accuracy:
 1. "Artifact Interrogation" & Live Editing
